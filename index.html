@@ -244,8 +244,8 @@
             fetch(apiUrl + '/' + Url + '?app_id=' + appId)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
-                    console.log(data.hybridGraph.title)
+                    // console.log(data)
+                    // console.log(data.hybridGraph.title)
                     // console.log(data.hybridGraph)
 
                     const title = bookmarkInput.value;
@@ -258,7 +258,7 @@
                     fillBookmarkRecord(bookmarkRecord);
                     storeBookmarks(bookmarkRecord);
                     bookmarkForm.reset();
-                    console.table(bookmarkRecord);
+                    // console.table(bookmarkRecord);
                 })
                 .catch(error => {
                     alert("Please Enter a Valid URL, \nDo make sure to include ' http:// ' in the beggining of the URL.")
@@ -286,10 +286,10 @@
             if (!e.target.matches('.glyphicon-remove')) {
                 return;
             };
-            console.log('hello');
+            // console.log('hello');
             const index = e.target.parentNode.dataset.id;
 
-            console.log(index);
+            // console.log(index);
 
             bookmarkRecord.splice(index, 1);
             fillBookmarkRecord(bookmarkRecord);
@@ -322,7 +322,7 @@
             //     </a>
             //    `;
             // }
-            console.log(bookmarksHtml);
+            // console.log(bookmarksHtml);
             bookmarksList.innerHTML = bookmarksHtml;
         };
 
