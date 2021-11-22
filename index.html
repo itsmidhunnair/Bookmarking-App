@@ -62,7 +62,8 @@
         }
         
         .floater {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.171);
+            backdrop-filter: blur(10px);
             transition: 00.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) all;
             margin-top: 30px;
             margin-bottom: 30px;
@@ -70,6 +71,8 @@
         }
         
         .floater input[type=text] {
+            background: rgba(255, 255, 255, 0);
+            /* backdrop-filter: blur(10px); */
             padding: 30px 20px;
             border: none;
             box-shadow: none;
@@ -118,8 +121,9 @@
         .bookmark {
             display: flex;
             position: relative;
-            background: #fff;
-            color: #999;
+            background: rgba(255, 255, 255, 0.171);
+            backdrop-filter: blur(10px);
+            color: rgb(255, 255, 255);
             padding: 20px;
             transition: 0.3s ease all;
             border-bottom: 1px solid #ddd;
