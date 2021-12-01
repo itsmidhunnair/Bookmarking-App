@@ -70,7 +70,7 @@
             z-index: 3;
         }
         
-        .floater input[type=text] {
+        .floater input[type=url] {
             background: rgba(255, 255, 255, 0);
             color: white;
             border: none;
@@ -107,7 +107,7 @@
             transform: scale(1.2);
         }
         
-        body.show-floater .floater input[type=text] {
+        body.show-floater .floater input[type=url] {
             padding: 20px 20px;
             font-size: 10px;
         }
@@ -196,7 +196,7 @@
     <div class="floater content">
         <form class="bookmark-form">
             <div class="floater-top">
-                <input type="text" class="form-control" placeholder="Enter your Bookmark Here!">
+                <input type="url" class="form-control" placeholder="Enter your Bookmark Here!">
                 <div class="floater-bottom">
                     <button type="submit" class="btn btn-sm" style="background-color: #56c584; color: white;">Add</button>
                 </div>
@@ -208,7 +208,7 @@
     <!----------------Javascript---------------------->
     <script>
         const body = document.body;
-        const input = document.querySelector('input[type=text]');
+        const input = document.querySelector('input[type=url]');
         const overlay = document.querySelector('.overlay');
         const apiUrl = 'https://opengraph.io/api/1.1/site';
         const appId = '87e749cf-d494-4816-b0ec-6db5d6c9b711';
@@ -241,7 +241,7 @@
 
         const bookmarksList = document.querySelector('.bookmark-list');
         const bookmarkForm = document.querySelector('.bookmark-form');
-        const bookmarkInput = bookmarkForm.querySelector('input[type=text]');
+        const bookmarkInput = bookmarkForm.querySelector('input[type=url]');
         const bookmarkRecord = JSON.parse(localStorage.getItem('bookmarkRecord')) || [];
         // const bookmarkRecord = [];
 
