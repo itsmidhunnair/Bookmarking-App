@@ -1,0 +1,168 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1635100513069-5e89827da127?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1580&q=80');
+    background-size: cover;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+h5 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    color: white;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #56c584;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.content {
+    font-size: 19px;
+    line-height: 1.5;
+    width: 80%;
+    max-width: 550px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 5px;
+}
+
+.floater {
+    background: rgba(255, 255, 255, 0.171);
+    backdrop-filter: blur(10px);
+    transition: 00.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) all;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    z-index: 3;
+}
+
+.floater input[type=url] {
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    transition: 00.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) all;
+}
+
+.floater-bottom {
+    padding: 6px 10px 8px;
+    text-align: right;
+    border-top: 1px solid #DDD;
+}
+
+.floater-bottom button {
+    padding: 4px 8px;
+    font-size: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.50);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease opacity;
+    z-index: 1;
+    /* pointer-events: none; */
+}
+
+body.show-floater .floater {
+    transform: scale(1.2);
+}
+
+body.show-floater .floater input[type=url] {
+    padding: 20px 20px;
+    font-size: 10px;
+}
+
+body.show-floater .overlay {
+    opacity: 2;
+}
+
+
+/* ***********Bookmark Lists********** */
+
+.bookmark {
+    display: flex;
+    position: relative;
+    background: rgba(255, 255, 255, 0.171);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    transition: 0.3s ease all;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.bookmark:hover {
+    color: #1ce;
+    text-decoration: none;
+}
+
+.bookmark:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.bookmark:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 0;
+}
+
+.bookmark .img {
+    background-color: #ddd;
+    border-radius: 3px;
+    /* background-image: url('https://d1fdloi71mui9q.cloudfront.net/3RltaWs7TAmw4uoo2Pvr_58k03XRKYnSVl6yP'); */
+    background-size: cover;
+    background-position: top center;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+img {
+    background-color: #ddd;
+    border-radius: 3px;
+    /* background-image: url('https://d1fdloi71mui9q.cloudfront.net/3RltaWs7TAmw4uoo2Pvr_58k03XRKYnSVl6yP'); */
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.bookmark .title {
+    display: flex;
+    align-items: center;
+}
+
+.bookmark .glyphicon-remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ddd;
+    font-size: 18px;
+    transition: 00.3s ease color;
+    /* cursor: pointer; */
+    z-index: 100;
+}
+
+.bookmark .glyphicon-remove:hover {
+    color: #c00c00;
+}
